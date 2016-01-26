@@ -1,0 +1,24 @@
+---
+# Props to Brian Aker for most of these plays
+# https://github.com/BrianAker/ansible-osx/blob/master/bootstrap.yaml
+
+- name: Check for xcode
+  command: xcode-select --print-path
+  register: xcode_select_result
+  ignore_errors: true
+
+- name: Check to see if xcode has been run
+  command: xcodebuild -checkFirstLaunchStatus
+  register: xcodebuild_launch_result
+  when: xcode_select_result.rc == 0
+  ignore_errors: true
+
+- name: Accept xcode license
+  command: /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -license accept
+  become: yes
+  become_method: sudo 
+  when: xcodebuild_launch_result.rc != 0
+
+- name: Anstall xcode cli when necessary
+  command: xcode-select --install
+  when: xcodebuild_launch_result.changed

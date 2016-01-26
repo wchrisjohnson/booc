@@ -4,9 +4,10 @@
   gather_facts: yes
 
   roles:
+    - xcode
     - homebrew
-    - textmate2
     - zsh
+    - textmate2
     - osx
 
   vars:

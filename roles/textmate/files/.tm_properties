@@ -1,0 +1,11 @@
+# Settings
+encoding         = UTF-8
+fontName         = "Menlo"
+fontSize         = 14
+include          = "{$include,.*}"
+lineEndings      = '\n'
+softTabs         = true
+softWrap         = true
+spellChecking    = true
+showInvisibles   = true
+tabSize          = 2

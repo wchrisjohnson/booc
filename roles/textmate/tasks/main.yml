@@ -1,0 +1,3 @@
+---
+- name: Copy Textmate properties file to home folder
+  copy: src=".tm_properties" dest="{{ home_folder }}/.tm_properties" force=yes

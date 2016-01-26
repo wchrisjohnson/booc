@@ -7,6 +7,7 @@
     - homebrew
     - textmate2
     - zsh
+    - osx
 
   vars:
     - computername: drakken

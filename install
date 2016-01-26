@@ -34,5 +34,5 @@ if [ -z "$PLAYBOOK" ]; then
 	echo "No playbook specified. Create a playbook for each computer you need to configure."
 else	
 	echo "Running the primary ansible playbook"
-	ansible-playbook $PLAYBOOK
+	ansible-playbook --ask-become-pass $PLAYBOOK
 fi

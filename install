@@ -29,7 +29,6 @@ else
 	echo "ansible installed."
 fi
 
-
 if [ -z "$PLAYBOOK" ]; then
 	echo "No playbook specified. Create a playbook for each computer you need to configure."
 else	

@@ -6,8 +6,7 @@
   roles:
     - homebrew
     - textmate2
+    - zsh
 
   vars:
     - computername: drakken
-    - git_user_name: Chris Johnson
-    - git_user_email: wchrisjohnson@gmail.com

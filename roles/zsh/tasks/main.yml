@@ -1,0 +1,26 @@
+---
+- name: Determine if zsh is the current shell 
+  shell: 'echo $SHELL' 
+  register: default_shell
+
+- name: make zsh default if not already 
+  shell: chsh -s /bin/zsh 
+  when: default_shell.stdout.find('/bin/zsh') == -1 
+
+- git: repo="{{ github_home }}/prezto.git" 
+       dest="{{ home_folder }}/.zprezto/" 
+       track_submodules=yes 
+       recursive=yes 
+       update=yes
+       force=yes
+
+- file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}"
+        dest="{{ home_folder }}/.{{ item }}"
+        state=link
+  with_items:
+    - 'zlogin'
+    - 'zlogout'
+    - 'zpreztorc'
+    - 'zprofile'
+    - 'zshenv'
+    - 'zshrc'

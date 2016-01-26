@@ -1,0 +1,9 @@
+---
+username: wchrisjohnson
+home_folder: "/Users/{{ username }}"
+src_folder: "{{ home_folder }}/src"
+ssh_folder: "{{ home_folder }}/.ssh"
+git_user_name: Chris Johnson
+git_user_email: wchrisjohnson@gmail.com
+github_username: "{{ username }}"
+github_home: "https://github.com/{{ github_username }}"

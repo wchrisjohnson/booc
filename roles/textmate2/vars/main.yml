@@ -1,7 +1,0 @@
----
-username: wchrisjohnson
-home_folder: "/Users/{{ username }}"
-# code_folder: "{{ home_folder }}/src"
-# ssh_folder: "{{ home_folder }}/.ssh"
-# github_username: "{{ username }}"
-# github_home: "https://github.com/{{ username }}"

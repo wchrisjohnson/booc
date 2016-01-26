@@ -1,0 +1,52 @@
+---
+homebrew_taps:
+  - homebrew/versions
+  - homebrew/dupes
+  - homebrew/binary
+  - Goles/battery
+
+homebrew_packages:
+  - { name: bash }
+  - { name: battery }
+  - { name: binutils }
+  - { name: coreutils }
+  - { name: diffutils }
+  - { name: dockutil }
+  - { name: ed, install_options: with-default-names }
+  - { name: erlang }
+  - { name: elixir }
+  - { name: fasd }
+  - { name: file-formula }
+  - { name: findutils, install_options: with-default-names }
+  - { name: gawk }
+  - { name: git }
+  - { name: git-flow }
+  - { name: gnu-indent, install_options: with-default-names}
+  - { name: gnu-sed, install_options: with-default-names}
+  - { name: gnu-tar, install_options: with-default-names}
+  - { name: gnu-which, install_options: with-default-names}
+  - { name: gnutls }  
+  - { name: grep, install_options: with-default-names}
+  - { name: gzip }
+  - { name: less } 
+  - { name: hub }
+  - { name: httpie }
+  - { name: jq }
+  - { name: nmap }
+  - { name: openssh }
+  - { name: peco }
+  - { name: psgrep }
+  - { name: pstree }
+  - { name: reattach-to-user-namespace }
+  - { name: rsync }
+  - { name: screen }
+  - { name: ssh-copy-id }
+  - { name: tmux }
+  - { name: tree }
+  - { name: unzip }
+  - { name: watch }
+  - { name: wdiff, install_options: with-gettext }
+  - { name: wget,
+      install_options: enable-iri }
+  - { name: zsh }
+  - { name: zsh-completions }

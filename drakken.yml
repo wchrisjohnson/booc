@@ -1,0 +1,13 @@
+---
+- hosts: localhost
+  connection: local
+  gather_facts: yes
+  # sudo: no
+
+  roles:
+    - homebrew
+
+  vars:
+    - computername: drakken
+    - git_user_name: Chris Johnson
+    - git_user_email: wchrisjohnson@gmail.com

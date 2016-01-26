@@ -13,7 +13,10 @@ Here's to bringing order out of the chaos of managing a modern development works
   - copy files from 1Password to ~/.ssh
   - chmod 700 ~/.ssh/id_rsa
 3. Clone this repo locally & cd into the repo folder
-  - ~/src
+```
+git clone git@github.com:wchrisjohnson/booc.git ~/.booc
+cd ~/.booc
+```
 
 # Let's do this!
 ```
@@ -33,22 +36,31 @@ Two possible solutions:
 For now, this is just my todo list.
 
 * Dash
+* Flux
 * Google Chrome
+* Google Drive
+* GPG Keychain
 * Handbrake
 * HipChat
+* HP MyRoom
 * istat-menus4
 * Junos Pulse
+* Marked (App Store)
 * Microsoft Lync
 * Microsoft Office 2011/2016
 * Microsoft OneNote (App Store)
-* Pycharm
+* NetSpot
+* P4Merge
+* Pycharm 5
 * Screenhero
+* Skitch
 * Skype
-* Space Gremlin
+* Space Gremlin Pro
 * SuperDuper!
-* Sublime Text
-* TextMate
-* Tower
+* TextMate 2
+* Textual 5 (App Store)
+* Tower 2
 * TunnelBlick
-* VMware Fusion 7
+* Tweetbot
 * vagrant
+* VMware Fusion 7

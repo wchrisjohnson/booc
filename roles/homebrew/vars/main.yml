@@ -32,6 +32,7 @@ homebrew_packages:
   - { name: hub }
   - { name: httpie }
   - { name: jq }
+  - { name: mackup }
   - { name: nmap }
   - { name: openssh }
   - { name: peco }

@@ -9,10 +9,17 @@ Here's to bringing order out of the chaos of managing a modern development works
 
 # Preparation
 1. Install 1Password from the Apple Store; sync with iCloud.
-2. Install work related SSH keys from 1Password.
+
+2. Install SSH keys from 1Password.
   - copy files from 1Password to ~/.ssh
   - chmod 700 ~/.ssh/id_rsa
-3. Clone this repo locally & cd into the repo folder
+
+3. Accept the XCode license agreement
+```
+git status
+```
+
+4. Clone this repo locally & cd into the repo folder
 ```
 git clone git@github.com:wchrisjohnson/booc.git ~/.booc
 cd ~/.booc
@@ -38,7 +45,7 @@ Two possible solutions:
 
 For now, this is just my todo list.
 
-* Dash
+* Dash 3 (App Store)
 * Flux
 * Google Chrome
 * Google Drive
@@ -52,18 +59,19 @@ For now, this is just my todo list.
 * Microsoft Lync
 * Microsoft Office 2011/2016
 * Microsoft OneNote (App Store)
+* Microsoft OneDrive (App Store)
 * NetSpot
 * P4Merge
 * Pycharm 5
 * Screenhero
-* Skitch
+* Skitch (App Store)
 * Skype
-* Space Gremlin Pro
+* Space Gremlin Pro (App Store)
 * SuperDuper!
 * TextMate 2
 * Textual 5 (App Store)
-* Tower 2
+* Tower 2 
 * TunnelBlick
-* Tweetbot
+* Tweetbot (App Store)
 * vagrant
 * VMware Fusion 7

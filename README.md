@@ -23,7 +23,10 @@ cd ~/.booc
 ./install <machine-name>.yml
 ```
 
-
+# Restore configs for selected apps
+```
+mackup -v restore
+```
 
 # Apps that require manual install
 Currently, installing OSX applications that have a GUI is a bit problematic. Granted I'm a bit OCD, but I've had issues beyond just aesthetics with linking apps into the ~/Applications folder. So for now, I'm not gonna do it.

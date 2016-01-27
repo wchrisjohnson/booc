@@ -1,0 +1,3 @@
+---
+- name: Copy Mackup config file to home folder
+  copy: src=".mackup.cfg" dest="{{ home_folder }}/.mackup.cfg" force=yes

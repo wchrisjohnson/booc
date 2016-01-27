@@ -6,8 +6,9 @@
   roles:
     - xcode
     - homebrew
-    - zsh
+    - zsh 
     - textmate2
+    - mackup
     - osx
 
   vars:

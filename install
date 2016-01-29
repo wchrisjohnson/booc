@@ -29,6 +29,14 @@ else
 	echo "ansible installed."
 fi
 
+# Install virtualenv if necesary
+if ! exists virtualenv; then
+    echo "Install virtualenv"
+    sudo pip install -q virtualenv
+else
+	echo "virtualenv installed."
+fi
+
 if [ -z "$PLAYBOOK" ]; then
 	echo "No playbook specified. Create a playbook for each computer you need to configure."
 else	

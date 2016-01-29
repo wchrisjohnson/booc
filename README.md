@@ -45,6 +45,7 @@ Two possible solutions:
 
 For now, this is just my todo list.
 
+* Blue Jeans
 * Dash 3 (App Store)
 * Flux
 * Google Chrome

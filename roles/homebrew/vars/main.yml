@@ -12,6 +12,9 @@ homebrew_packages:
   - { name: coreutils }
   - { name: diffutils }
   - { name: dockutil }
+  - { name: docker }
+  - { name: docker-machine }
+  - { name: docker-compose }
   - { name: ed, install_options: with-default-names }
   - { name: erlang }
   - { name: elixir }
@@ -26,12 +29,13 @@ homebrew_packages:
   - { name: gnu-sed, install_options: with-default-names}
   - { name: gnu-tar, install_options: with-default-names}
   - { name: gnu-which, install_options: with-default-names}
-  - { name: gnutls }  
+  - { name: gnutls }
   - { name: grep, install_options: with-default-names}
   - { name: gzip }
-  - { name: less } 
+  - { name: less }
   - { name: hub }
   - { name: httpie }
+  - { name: htop-osx }
   - { name: jq }
   - { name: mackup }
   - { name: nmap }
@@ -39,6 +43,7 @@ homebrew_packages:
   - { name: peco }
   - { name: psgrep }
   - { name: pstree }
+  - { name: rbenv }
   - { name: reattach-to-user-namespace }
   - { name: rsync }
   - { name: screen }

@@ -1,27 +1,53 @@
 ---
-- name: Determine if zsh is the current shell 
-  shell: 'echo $SHELL' 
+- name: Determine if zsh is the current shell
+  shell: 'echo $SHELL'
   register: default_shell
 
-- name: make zsh default if not already
-  shell: chsh -s /bin/zsh 
-  become: yes 
-  when: default_shell.stdout.find('/bin/zsh') == -1 
+- name: Make zsh the default shell if not already
+  shell: chsh -s /bin/zsh
+  become: yes
+  when: default_shell.stdout.find('/bin/zsh') == -1
 
-- git: repo="{{ github_home }}/prezto.git" 
-       dest="{{ home_folder }}/.zprezto/" 
-       track_submodules=yes 
-       recursive=yes 
-       update=yes
-       force=yes
+- name: Discover whether .zprezto folder exists
+  git: repo="{{ github_home }}/prezto.git"
+       dest="{{ home_folder }}/.zprezto/"
+       update=no
+  register: prezto_cloned
 
-- file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}"
-        dest="{{ home_folder }}/.{{ item }}"
-        state=link
-  with_items:
-    - 'zlogin'
-    - 'zlogout'
-    - 'zpreztorc'
-    - 'zprofile'
-    - 'zshenv'
-    - 'zshrc'
+- name: Initial clone of the prezto repo
+  git: repo="{{ github_home }}/prezto.git"
+       dest="{{ home_folder }}/.zprezto/"
+       track_submodules=yes
+       recursive=yes
+  when: prezto_cloned|failed
+
+# - name: Update local copy of the prezto repo
+#   git: repo="{{ github_home }}/prezto.git"
+#        dest="{{ home_folder }}/.zprezto/"
+#        track_submodules=yes
+#        recursive=yes
+#        update=yes
+#        force=yes
+#   sudo_user: "{{ github_username }}"
+#   when: prezto_cloned|succeeded
+
+# - debug: 
+
+- name: Update prezto repo
+  shell: "cd {{ home_folder }}/.zprezto/; git checkout develop; git pull && git submodule update --init --recursive"
+  when: prezto_cloned|succeeded
+
+# - name: Link zprezto into home folder
+#   file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}"
+#         dest="{{ home_folder }}/.{{ item }}"
+#         state=link
+#   with_items:
+#     - 'zlogin'
+#     - 'zlogout'
+#     - 'zpreztorc'
+#     - 'zprofile'
+#     - 'zshenv'
+#     - 'zshrc'
+#
+# - name: Creates ~/bin directory
+#   file: path="{{ home_folder }}/bin" state=directory

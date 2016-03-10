@@ -31,11 +31,11 @@
 #   sudo_user: "{{ github_username }}"
 #   when: prezto_cloned|succeeded
 
-# - debug: 
+# - debug:
 
 - name: Update prezto repo
   shell: "cd {{ home_folder }}/.zprezto/; git checkout develop; git pull && git submodule update --init --recursive"
-  when: prezto_cloned|succeeded
+  when: prezto_cloned|success
 
 # - name: Link zprezto into home folder
 #   file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}"

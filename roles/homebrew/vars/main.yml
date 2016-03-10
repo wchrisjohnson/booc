@@ -6,15 +6,18 @@ homebrew_taps:
   - Goles/battery
 
 homebrew_packages:
+  - { name: archey }
   - { name: bash }
   - { name: battery }
   - { name: binutils }
+  - { name: boot2docker }
   - { name: coreutils }
   - { name: diffutils }
   - { name: dockutil }
   - { name: docker }
   - { name: docker-machine }
   - { name: docker-compose }
+  - { name: docker-swarm }
   - { name: ed, install_options: with-default-names }
   - { name: erlang }
   - { name: elixir }

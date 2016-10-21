@@ -7,6 +7,7 @@ homebrew_taps:
 
 homebrew_packages:
   - { name: archey }
+  - { name: aws-cli }
   - { name: bash }
   - { name: battery }
   - { name: binutils }
@@ -15,8 +16,9 @@ homebrew_packages:
   - { name: diffutils }
   - { name: dockutil }
   - { name: docker }
-  - { name: docker-machine }
   - { name: docker-compose }
+  - { name: docker-machine }
+  - { name: docker-machine-nfs }
   - { name: docker-swarm }
   - { name: ed, install_options: with-default-names }
   - { name: erlang }
@@ -33,6 +35,7 @@ homebrew_packages:
   - { name: gnu-tar, install_options: with-default-names}
   - { name: gnu-which, install_options: with-default-names}
   - { name: gnutls }
+  - { name: go }
   - { name: grep, install_options: with-default-names}
   - { name: gzip }
   - { name: less }

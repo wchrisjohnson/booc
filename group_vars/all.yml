@@ -1,5 +1,4 @@
 ---
-username: wchrisjohnson
 home_folder: "/Users/{{ username }}"
 src_folder: "{{ home_folder }}/src"
 ssh_folder: "{{ home_folder }}/.ssh"

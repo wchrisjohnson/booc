@@ -7,10 +7,7 @@
     - xcode
     - homebrew
     - zsh
-    - textmate2
-    - mackup
-    - osx
 
   vars:
-    - computername: drakken
-    - username: wchrisjohnson
+    - computername: johnsonch-ltm
+    - username: johnson.chris

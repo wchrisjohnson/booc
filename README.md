@@ -1,5 +1,5 @@
-# booc
-After several months of trying every OSX related setup/install/configuration management approach known to man, I think this is (for me, for now) finally the one. Ansible is a tool I use each day at HP Enterprise, and I like it more and more as I use it. Puppet, Chef, bash, python, etc. are all fine tools for their many uses. This is the approach that has FINALLY felt right for me.
+# booc (bringing order out of chaos)
+After several months of trying every OSX related setup/install/configuration management approach known to man, I think this is (for me, for now) finally the one. Ansible is a tool I use frequently, and I like it more and more as I use it. Puppet, Chef, bash, python, etc. are all fine tools for their many uses. This is the approach that has finally felt right for me.
 
 1. Lightweight - just enough Ansible to get the job done
 2. Simple - most of what I need in one git repo
@@ -12,7 +12,10 @@ Here's to bringing order out of the chaos of managing a modern development works
 
 2. Install SSH keys from 1Password.
   - copy files from 1Password to ~/.ssh
-  - chmod 700 ~/.ssh/id_rsa
+  - set correct perms on ssh keypair
+```
+chmod 700 ~/.ssh/id_rsa
+```
 
 3. Accept the XCode license agreement
 ```
@@ -30,12 +33,12 @@ cd ~/.booc
 ./install <machine-name>.yml
 ```
 
-# Restore configs for selected apps
+# Restore configs for selected apps (optional)
 ```
 mackup -v restore
 ```
 
-# Apps that require manual install
+# Apps that require manual install (optional)
 Currently, installing OSX applications that have a GUI is a bit problematic. Granted I'm a bit OCD, but I've had issues beyond just aesthetics with linking apps into the ~/Applications folder. So for now, I'm not gonna do it.
 
 Two possible solutions:

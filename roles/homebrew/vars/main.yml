@@ -44,6 +44,7 @@ homebrew_packages:
   - { name: htop-osx }
   - { name: jq }
   - { name: mackup }
+  - { name: neovim/neovim/neovim }
   - { name: nmap }
   - { name: openssh }
   - { name: peco }

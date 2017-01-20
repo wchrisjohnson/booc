@@ -9,20 +9,20 @@
   when: default_shell.stdout.find('/bin/zsh') == -1
 
 - name: Discover whether .zprezto folder exists
-  git: repo="{{ github_home }}/prezto.git"
+  git: repo="{{ bitbucket_home }}/prezto.git"
        dest="{{ home_folder }}/.zprezto/"
        update=no
   register: prezto_cloned
 
 - name: Initial clone of the prezto repo
-  git: repo="{{ github_home }}/prezto.git"
+  git: repo="{{ bitbucket_home }}/prezto.git"
        dest="{{ home_folder }}/.zprezto/"
        track_submodules=yes
        recursive=yes
   when: prezto_cloned|failed
 
 # - name: Update local copy of the prezto repo
-#   git: repo="{{ github_home }}/prezto.git"
+#   git: repo="{{ bitbucket_home }}/prezto.git"
 #        dest="{{ home_folder }}/.zprezto/"
 #        track_submodules=yes
 #        recursive=yes
@@ -37,17 +37,17 @@
   shell: "cd {{ home_folder }}/.zprezto/; git checkout develop; git pull && git submodule update --init --recursive"
   when: prezto_cloned|success
 
-# - name: Link zprezto into home folder
-#   file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}"
-#         dest="{{ home_folder }}/.{{ item }}"
-#         state=link
-#   with_items:
-#     - 'zlogin'
-#     - 'zlogout'
-#     - 'zpreztorc'
-#     - 'zprofile'
-#     - 'zshenv'
-#     - 'zshrc'
-#
-# - name: Creates ~/bin directory
-#   file: path="{{ home_folder }}/bin" state=directory
+- name: Link zprezto into home folder
+  file: src="{{ home_folder }}/.zprezto/runcoms/{{ item }}"
+        dest="{{ home_folder }}/.{{ item }}"
+        state=link
+  with_items:
+    - 'zlogin'
+    - 'zlogout'
+    - 'zpreztorc'
+    - 'zprofile'
+    - 'zshenv'
+    - 'zshrc'
+
+- name: Creates ~/bin directory
+  file: path="{{ home_folder }}/bin" state=directory

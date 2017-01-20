@@ -6,16 +6,16 @@
   register: brew_stat_result
 
 # Props to Brian Akers for his method of installing Homebrew.
-# https://github.com/BrianAker/ansible-osx/blob/master/roles/homebrew/tasks/main.yaml  
+# https://github.com/BrianAker/ansible-osx/blob/master/roles/homebrew/tasks/main.yaml
 - name: Install homebrew if necessary
   raw: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   register: homebrew_result
   failed_when: "homebrew_result.rc != 0 and 'Homebrew is already installed' not in homebrew_result.stderr"
   # Successful installs return 0. Running when already installed returns 1 and writes
   # to stderr, but we wish to consider this specific error a success.
-  when: brew_stat_result.stat.exists == False  
+  when: brew_stat_result.stat.exists == False
 
-# These last three plays assume an installed homebrew. We check to see if the first play 
+# These last three plays assume an installed homebrew. We check to see if the first play
 # (install check) returned success, or the second play (successful install) returned success.
 - name: Update and Upgrade all
   homebrew:
@@ -27,7 +27,7 @@
   homebrew_tap:
     tap: "{{ item }}"
     state: present
-  with_items: homebrew_taps
+  with_items: "{{ homebrew_taps }}"
   when: (brew_stat_result.stat.exists == True) or ("homebrew_result.rc == 0")
 
 - name: Install packages
@@ -35,5 +35,5 @@
     name: "{{ item.name }}"
     state: latest
     install_options: "{{ item.install_options|default() }}"
-  with_items: homebrew_packages
+  with_items: "{{ homebrew_packages }}"
   when: (brew_stat_result.stat.exists == True) or ("homebrew_result.rc == 0")

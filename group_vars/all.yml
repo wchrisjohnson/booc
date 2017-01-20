@@ -6,3 +6,5 @@ git_user_name: Chris Johnson
 git_user_email: wchrisjohnson@gmail.com
 github_username: "{{ username }}"
 github_home: "https://github.com/{{ github_username }}"
+bitbucket_username: "{{ username }}"
+bitbucket_home: "https://bitbucket.com/{{ bitbucket_username }}"

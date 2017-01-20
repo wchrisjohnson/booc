@@ -7,7 +7,7 @@ homebrew_taps:
 
 homebrew_packages:
   - { name: archey }
-  - { name: aws-cli }
+  - { name: awscli }
   - { name: bash }
   - { name: battery }
   - { name: binutils }
@@ -20,23 +20,30 @@ homebrew_packages:
   - { name: docker-machine }
   - { name: docker-machine-nfs }
   - { name: docker-swarm }
-  - { name: ed, install_options: with-default-names }
+  - { name: ed,
+      install_options: with-default-names }
   - { name: erlang }
   - { name: elixir }
   - { name: fasd }
   - { name: file-formula }
-  - { name: findutils, install_options: with-default-names }
+  - { name: findutils,
+      install_options: with-default-names }
   - { name: gawk }
   - { name: git }
   - { name: git-flow }
   - { name: git-review }
-  - { name: gnu-indent, install_options: with-default-names}
-  - { name: gnu-sed, install_options: with-default-names}
-  - { name: gnu-tar, install_options: with-default-names}
-  - { name: gnu-which, install_options: with-default-names}
+  - { name: gnu-indent,
+      install_options: with-default-names}
+  - { name: gnu-sed,
+      install_options: with-default-names}
+  - { name: gnu-tar,
+      install_options: with-default-names}
+  - { name: gnu-which,
+      install_options: with-default-names}
   - { name: gnutls }
   - { name: go }
-  - { name: grep, install_options: with-default-names}
+  - { name: grep,
+      install_options: with-default-names}
   - { name: gzip }
   - { name: less }
   - { name: hub }
@@ -59,7 +66,8 @@ homebrew_packages:
   - { name: tree }
   - { name: unzip }
   - { name: watch }
-  - { name: wdiff, install_options: with-gettext }
+  - { name: wdiff,
+      install_options: with-gettext }
   - { name: wget,
       install_options: enable-iri }
   - { name: zsh }

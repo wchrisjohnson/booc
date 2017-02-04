@@ -49,10 +49,12 @@ homebrew_packages:
   - { name: hub }
   - { name: httpie }
   - { name: htop-osx }
+  - { name: hugo }
   - { name: jq }
   - { name: mackup }
   - { name: neovim/neovim/neovim }
   - { name: nmap }
+  - { name: node }
   - { name: openssh }
   - { name: peco }
   - { name: psgrep }

@@ -51,6 +51,7 @@ homebrew_packages:
   - { name: htop-osx }
   - { name: hugo }
   - { name: jq }
+  - { name: kubectl }
   - { name: mackup }
   - { name: neovim/neovim/neovim }
   - { name: nmap }
